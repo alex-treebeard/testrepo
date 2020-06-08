@@ -1,0 +1,14 @@
+on:
+  schedule:
+    - cron: "* * * * *"
+  push:
+    branches:
+      - master
+jobs:
+  Run:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run
+        run: |
+          printenv
